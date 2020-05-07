@@ -39,4 +39,11 @@ public class FizzBuzzServiceTest {
         // 5, 7
         assertThat(service.say(35), equalTo("FizzBuzz"));
     }
+
+    @Test
+    public void given_any_three_special_num_mulriple_when_say_then_return_FizzBuzz() {
+        assertThat(service.say(105), equalTo("FizzBuzzWhizz"));
+        assertThat(service.say(210), equalTo("FizzBuzzWhizz"));
+        assertThat(service.say(420), equalTo("FizzBuzzWhizz"));
+    }
 }

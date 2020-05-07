@@ -25,6 +25,8 @@ public class FizzBuzzService {
             return result;
         } else if (multipleCount == 2) {
             return "FizzBuzz";
+        } else if (multipleCount == 3) {
+            return "FizzBuzzWhizz";
         }
         return "";
     }
