@@ -15,4 +15,11 @@ public class FizzBuzzServiceTest {
         assertThat(service.say(6), equalTo("Fizz"));
         assertThat(service.say(9), equalTo("Fizz"));
     }
+
+    @Test
+    public void given_5_mulriple_when_say_then_return_Buzz() {
+        assertThat(service.say(5), equalTo("Buzz"));
+        assertThat(service.say(10), equalTo("Buzz"));
+        assertThat(service.say(20), equalTo("Buzz"));
+    }
 }
