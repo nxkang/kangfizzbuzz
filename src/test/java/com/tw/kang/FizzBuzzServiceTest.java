@@ -36,8 +36,8 @@ public class FizzBuzzServiceTest {
         assertThat(service.say(15), equalTo("FizzBuzz"));
         // 3, 7
         assertThat(service.say(21), equalTo("FizzWhizz"));
-        // 5, 7
-        assertThat(service.say(35), equalTo("BuzzWhizz"));
+        // (5, 7) *2
+        assertThat(service.say(70), equalTo("BuzzWhizz"));
     }
 
     @Test
@@ -55,5 +55,10 @@ public class FizzBuzzServiceTest {
         assertThat(service.say(2), equalTo("2"));
         assertThat(service.say(122), equalTo("122"));
         assertThat(service.say(542), equalTo("542"));
+    }
+
+    @Test
+    public void given_num_contains_3_when_say_then_return_Fizz() {
+        assertThat(service.say(13), equalTo("Fizz"));
     }
 }

@@ -9,6 +9,10 @@ public class FizzBuzzService {
 
 
     public String say(int i) {
+        if (String.valueOf(i).contains("3")) {
+            return "Fizz";
+        }
+
         List<String> result = new ArrayList<>();
         if (i % 3 == 0) {
             result.add("Fizz");
