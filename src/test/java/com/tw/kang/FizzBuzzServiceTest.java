@@ -33,7 +33,7 @@ public class FizzBuzzServiceTest {
     @Test
     public void given_any_two_special_num_mulriple_when_say_then_return_FizzBuzz() {
         // 3, 5
-        assertThat(service.say(15), equalTo("FizzBuzz"));
+        assertThat(service.say(60), equalTo("FizzBuzz"));
         // 3, 7
         assertThat(service.say(21), equalTo("FizzWhizz"));
         // (5, 7) *2
@@ -42,8 +42,6 @@ public class FizzBuzzServiceTest {
 
     @Test
     public void given_any_three_special_num_mulriple_when_say_then_return_FizzBuzz() {
-        // 3*5*7
-        assertThat(service.say(105), equalTo("FizzBuzzWhizz"));
         // 2*3*5*7
         assertThat(service.say(210), equalTo("FizzBuzzWhizz"));
         // 4*3*5*7
@@ -60,5 +58,15 @@ public class FizzBuzzServiceTest {
     @Test
     public void given_num_contains_3_when_say_then_return_Fizz() {
         assertThat(service.say(13), equalTo("Fizz"));
+    }
+
+    @Test
+    public void given_num_contains_5_when_say_then_return_BuzzWhizz() {
+        // 3, 5
+        assertThat(service.say(15), equalTo("Buzz"));
+        // 3*5*7
+        assertThat(service.say(105), equalTo("BuzzWhizz"));
+        assertThat(service.say(35), equalTo("BuzzWhizz"));
+        assertThat(service.say(105), equalTo("BuzzWhizz"));
     }
 }

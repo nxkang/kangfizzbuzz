@@ -9,12 +9,12 @@ public class FizzBuzzService {
 
 
     public String say(int i) {
-        if (String.valueOf(i).contains("3")) {
+        if (!String.valueOf(i).contains("5") && String.valueOf(i).contains("3")) {
             return "Fizz";
         }
 
         List<String> result = new ArrayList<>();
-        if (i % 3 == 0) {
+        if (!String.valueOf(i).contains("5") && i % 3 == 0) {
             result.add("Fizz");
         }
         if (i % 5 == 0) {
