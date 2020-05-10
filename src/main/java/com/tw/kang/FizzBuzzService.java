@@ -1,33 +1,29 @@
 package com.tw.kang;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.util.stream.Collectors.joining;
+
 public class FizzBuzzService {
 
 
     public String say(int i) {
-
-        // 这个result有效仅当num只是一个数字的倍数
-        String result = "";
-        int multipleCount = 0;
+        List<String> result = new ArrayList<>();
         if (i % 3 == 0) {
-            multipleCount += 1;
-            result = "Fizz";
+            result.add("Fizz");
         }
         if (i % 5 == 0) {
-            multipleCount += 1;
-            result = "Buzz";
+            result.add("Buzz");
         }
         if (i % 7 == 0) {
-            multipleCount += 1;
-            result = "Whizz";
+            result.add("Whizz");
         }
 
-        if (multipleCount == 1) {
-            return result;
-        } else if (multipleCount == 2) {
-            return "FizzBuzz";
-        } else if (multipleCount == 3) {
-            return "FizzBuzzWhizz";
+        if (result.size() == 0) {
+            return String.valueOf(i);
+        } else {
+            return String.join("", result);
         }
-        return String.valueOf(i);
     }
 }

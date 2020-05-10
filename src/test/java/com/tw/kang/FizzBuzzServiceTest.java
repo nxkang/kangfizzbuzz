@@ -35,15 +35,18 @@ public class FizzBuzzServiceTest {
         // 3, 5
         assertThat(service.say(15), equalTo("FizzBuzz"));
         // 3, 7
-        assertThat(service.say(21), equalTo("FizzBuzz"));
+        assertThat(service.say(21), equalTo("FizzWhizz"));
         // 5, 7
-        assertThat(service.say(35), equalTo("FizzBuzz"));
+        assertThat(service.say(35), equalTo("BuzzWhizz"));
     }
 
     @Test
     public void given_any_three_special_num_mulriple_when_say_then_return_FizzBuzz() {
+        // 3*5*7
         assertThat(service.say(105), equalTo("FizzBuzzWhizz"));
+        // 2*3*5*7
         assertThat(service.say(210), equalTo("FizzBuzzWhizz"));
+        // 4*3*5*7
         assertThat(service.say(420), equalTo("FizzBuzzWhizz"));
     }
 
