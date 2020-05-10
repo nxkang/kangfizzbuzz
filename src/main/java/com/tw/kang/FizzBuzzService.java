@@ -28,6 +28,6 @@ public class FizzBuzzService {
         } else if (multipleCount == 3) {
             return "FizzBuzzWhizz";
         }
-        return "";
+        return String.valueOf(i);
     }
 }

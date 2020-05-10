@@ -46,4 +46,11 @@ public class FizzBuzzServiceTest {
         assertThat(service.say(210), equalTo("FizzBuzzWhizz"));
         assertThat(service.say(420), equalTo("FizzBuzzWhizz"));
     }
+
+    @Test
+    public void given_ordinary_num_when_say_then_return_itself() {
+        assertThat(service.say(2), equalTo("2"));
+        assertThat(service.say(122), equalTo("122"));
+        assertThat(service.say(542), equalTo("542"));
+    }
 }
